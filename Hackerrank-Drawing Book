@@ -1,0 +1,22 @@
+n=int(input().rstrip())
+p=int(input().rstrip())
+def pageCount(n,p):
+    c=0
+    mid=n//2
+    if p==mid or p<mid:
+        i=1
+        while(i<p):
+            c+=1
+            i+=2
+    else:
+        if n%2==0:
+            i=n
+        else:
+            i=n-1
+        while(i>p):
+            c+=1
+            i-=2
+    return c
+
+print(pageCount(n,p))
+
